@@ -26,7 +26,7 @@ export function SocialImpact() {
             Social Value Created
           </div>
           <p className="text-[#666666] text-[16px] leading-[1.6] mt-[20px]">
-            2026년, 롯데물산이 창출한 사회적 가치의 총액입니다.<br className="hidden md:block"/>
+            2025년, 롯데물산이 창출한 사회적 가치의 총액입니다.<br className="hidden md:block"/>
             우리는 숫자를 넘어 진정한 변화를 만듭니다.
           </p>
         </motion.div>

@@ -44,7 +44,7 @@ export function CoreAgenda() {
             CORE AGENDA
           </div>
           <h2 className="text-[36px] md:text-[60px] font-[800] leading-[1.1] tracking-[-0.03em] text-[#111111]">
-            2026 Focus Areas
+            Focus Areas
           </h2>
         </motion.div>
 
@@ -69,27 +69,28 @@ export function CoreAgenda() {
           ))}
         </div>
 
-        {/* Hover Image (Desktop Only) */}
+        {/* Hover Image Preloaded (Desktop Only) */}
         <div className="hidden md:block pointer-events-none fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-[400px] h-[500px]">
-          <AnimatePresence>
-            {hoveredIndex !== null && (
-              <motion.div
-                key={hoveredIndex}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute inset-0 rounded-[10px] overflow-hidden bg-[#111111]"
-                style={{ filter: "brightness(0.8)" }}
-              >
-                <img 
-                  src={AGENDA_ITEMS[hoveredIndex].image} 
-                  alt={AGENDA_ITEMS[hoveredIndex].title}
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-            )}
-          </AnimatePresence>
+          {AGENDA_ITEMS.map((item, idx) => (
+            <motion.div
+              key={item.id}
+              initial={false}
+              animate={{ 
+                opacity: hoveredIndex === idx ? 1 : 0, 
+                scale: hoveredIndex === idx ? 1 : 0.95,
+                zIndex: hoveredIndex === idx ? 10 : 0
+              }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute inset-0 rounded-[10px] overflow-hidden bg-[#111111]"
+              style={{ filter: "brightness(0.8)" }}
+            >
+              <img 
+                src={item.image} 
+                alt={item.title}
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

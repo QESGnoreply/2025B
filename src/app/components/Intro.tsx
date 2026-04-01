@@ -9,7 +9,7 @@ export function Intro() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className="w-full max-w-[1200px] mx-auto text-left"
+        className="w-full text-left"
       >
         <p className="text-[#111111] font-[600] leading-[1.3] text-[clamp(30px,4vw,60px)] tracking-[-0.03em] mb-10">
           롯데물산은 도시의 스카이라인을 넘어,<br/>

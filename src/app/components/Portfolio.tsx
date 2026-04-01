@@ -6,8 +6,8 @@ const PORTFOLIO_BLOCKS = [
     id: "01",
     label: "01 PROPERTY",
     title: "Lotte World Tower",
-    desc: "세계적인 친환경 랜드마크 운영 노하우",
-    image: "https://images.unsplash.com/photo-1549429737-02052d921200?q=80&w=2000&auto=format&fit=crop"
+    desc: "글로벌 그린 랜드마크 운영",
+    image: "https://images.unsplash.com/photo-1736257902131-0aa732b9215c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0YWxsJTIwbW9kZXJuJTIwc2t5c2NyYXBlciUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3NzUwMDY1NjF8MA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     id: "02",
